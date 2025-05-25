@@ -5,10 +5,10 @@ namespace App\Product\Application;
 use App\Product\Domain\ProductRepositoryInterface;
 use App\Product\Infrastructure\Persistence\Entity\Product;
 
-final class GetProductByIdUseCase
+final readonly class GetProductByIdUseCase
 {
     public function __construct(
-        private readonly ProductRepositoryInterface $productRepository
+        private ProductRepositoryInterface $productRepository
     ) {
     }
 

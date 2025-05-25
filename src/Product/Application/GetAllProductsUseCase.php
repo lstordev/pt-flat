@@ -4,10 +4,10 @@ namespace App\Product\Application;
 
 use App\Product\Domain\ProductRepositoryInterface;
 
-final class GetAllProductsUseCase
+final readonly class GetAllProductsUseCase
 {
     public function __construct(
-        private readonly ProductRepositoryInterface $productRepository
+        private ProductRepositoryInterface $productRepository
     ) {
     }
 
