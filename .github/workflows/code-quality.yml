@@ -2,19 +2,9 @@ name: Code Quality
 
 on:
   push:
-    branches:
-      - master
-    paths:
-      - '**.php'
-      - 'composer.json'
-      - 'pint.json'
-      - 'phpstan.neon.dist'
+    branches: [ master ]
   pull_request:
-    paths:
-      - '**.php'
-      - 'composer.json'
-      - 'pint.json'
-      - 'phpstan.neon.dist'
+    branches: [ master ]
 
 jobs:
   setup:
@@ -28,7 +18,7 @@ jobs:
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.3'
+          php-version: '8.2'
 
       - name: Cache Composer dependencies
         id: composer-cache
@@ -51,7 +41,7 @@ jobs:
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.3'
+          php-version: '8.2'
 
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
