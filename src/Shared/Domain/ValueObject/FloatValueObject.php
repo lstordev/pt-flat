@@ -2,11 +2,13 @@
 
 namespace App\Shared\Domain\ValueObject;
 
-abstract class StringValueObject
+abstract class FloatValueObject
 {
-    public function __construct(protected string $value) {}
+    public function __construct(protected float $value)
+    {
+    }
 
-    final public function value(): string
+    final public function value(): float
     {
         return $this->value;
     }

@@ -4,7 +4,7 @@ namespace App\Product\Domain;
 
 use App\Shared\Domain\Aggregate;
 
-class Product extends Aggregate
+final class Product extends Aggregate
 {
     public function __construct(
         private ProductId $id,

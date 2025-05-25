@@ -2,8 +2,8 @@
 
 namespace App\Product\Domain;
 
-use App\Shared\Domain\ValueObject\StringValueObject;
+use App\Shared\Domain\ValueObject\FloatValueObject;
 
-class ProductName extends StringValueObject
+final class ProductPrice extends FloatValueObject
 {
 }

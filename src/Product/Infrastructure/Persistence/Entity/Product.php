@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity;
+namespace App\Product\Infrastructure\Persistence\Entity;
 
 use DateTimeImmutable;
 use Doctrine\ORM\Mapping as ORM;
@@ -32,9 +32,19 @@ class Product
         return $this->id;
     }
 
+    public function getCreatedAt(): DateTimeImmutable
+    {
+        return $this->created_at;
+    }
+
     public function getName(): ?string
     {
         return $this->name;
+    }
+
+    public function getPrice(): ?float
+    {
+        return $this->price;
     }
 
     public function setName(string $name): static
@@ -44,21 +54,11 @@ class Product
         return $this;
     }
 
-    public function getPrice(): ?float
-    {
-        return $this->price;
-    }
-
     public function setPrice(float $price): static
     {
         $this->price = $price;
 
         return $this;
-    }
-
-    public function getCreatedAt(): ?DateTimeImmutable
-    {
-        return $this->created_at;
     }
 
     public function setCreatedAt(DateTimeImmutable $created_at): static

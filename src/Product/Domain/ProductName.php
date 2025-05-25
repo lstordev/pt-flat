@@ -2,7 +2,8 @@
 
 namespace App\Product\Domain;
 
-class ProductId
-{
+use App\Shared\Domain\ValueObject\StringValueObject;
 
+final class ProductName extends StringValueObject
+{
 }
